@@ -21,8 +21,8 @@
 <p align="center">
   <img src="media/screenshots/splash.png" width="23%" alt="SmartPark Splash" />
   <img src="media/screenshots/slots.png" width="23%" alt="Select Parking Slot" />
-  <img src="media/screenshots/booking.png" width="23%" alt="Book Slot & Duration" />
-  <img src="media/screenshots/my-parking.png" width="23%" alt="My Parking Session" />
+  <img src="media/screenshots/booking.png" width="23%" alt="Book Slot" />
+  <img src="media/screenshots/my-parking.png" width="23%" alt="My Parking" />
 </p>
 -->
 
