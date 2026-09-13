@@ -13,25 +13,27 @@
 [![IoT](https://img.shields.io/badge/IoT-Sensors_&_Servo-blue?style=for-the-badge)](https://en.wikipedia.org/wiki/Internet_of_things)
 
 ---
-
 ## 📱 Project Preview
 
-<!-- Add the four app screenshots to media/screenshots/ and uncomment below -->
-<!--
 <p align="center">
-  <img src="media/screenshots/splash.png" width="23%" alt="SmartPark Splash" />
-  <img src="media/screenshots/slots.png" width="23%" alt="Select Parking Slot" />
-  <img src="media/screenshots/booking.png" width="23%" alt="Book Slot" />
-  <img src="media/screenshots/my-parking.png" width="23%" alt="My Parking" />
+  <img src="media/screenshots/splash.png" width="22%" alt="SmartPark Splash" />
+  &nbsp;
+  <img src="media/screenshots/slots.png" width="22%" alt="Select Parking Slot" />
+  &nbsp;
+  <img src="media/screenshots/booking.png" width="22%" alt="Book Parking Slot" />
+  &nbsp;
+  <img src="media/screenshots/my-parking.png" width="22%" alt="My Parking" />
 </p>
--->
 
-| 1. Splash & Auth | 2. Slot Selection | 3. Book Slot | 4. Active Session & Barrier |
-| :---: | :---: | :---: | :---: |
-| *SmartPark animated launch & anonymous login* | *Live availability grid (Available / Reserved / Occupied)* | *Car number entry & custom duration slider* | *Real-time countdown, session extend & barrier control* |
-
-> 📷 *Screenshots can be placed in `media/screenshots/` (`splash.png`, `slots.png`, `booking.png`, `my-parking.png`).*
-
+<p align="center">
+  <b>SmartPark</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Slot Selection</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>Book Slot</b>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <b>My Parking</b>
+</p>
 ---
 
 ## ℹ️ About the Project
