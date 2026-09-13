@@ -25,15 +25,6 @@
   <img src="media/screenshots/my-parking.png" width="22%" alt="My Parking" />
 </p>
 
-<p align="center">
-  <b>SmartPark</b>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Slot Selection</b>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>Book Slot</b>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <b>My Parking</b>
-</p>
 ---
 
 ## ℹ️ About the Project
