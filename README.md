@@ -13,6 +13,16 @@
 [![IoT](https://img.shields.io/badge/IoT-Sensors_&_Servo-blue?style=for-the-badge)](https://en.wikipedia.org/wiki/Internet_of_things)
 
 ---
+
+## ⚙️ ESP32 Firmware
+
+Arduino C++ firmware code for ESP32 to read IR sensors, update Firebase Realtime Database, and control the parking barrier.
+
+👉 [**View ESP32 Firmware**](https://gist.github.com/Ahmadali-dev375/bd5004e90e68d1599a9e044308afdb5b)
+
+> Firmware is shared separately for easier viewing and reuse.
+
+---
 ## 📱 Project Preview
 
 <p align="center">
