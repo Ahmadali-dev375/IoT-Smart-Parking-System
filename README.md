@@ -29,43 +29,7 @@
 
 ## ℹ️ About the Project
 
-Developed as a university team engineering project, this smart parking system bridges a mobile user interface with a physical IoT parking lot model. The Flutter application allows drivers to discover available spaces, book designated parking spots with custom durations, monitor active parking sessions with live countdowns, and remotely actuate an entry barrier servo gate.
-
----
-
-## 🔄 How It Works
-
-The architecture intentionally separates ACID-compliant reservation management from high-frequency IoT hardware telemetry using a dual-database design:
-
-```mermaid
-flowchart TD
-    subgraph MobileApp ["Flutter Mobile Application"]
-        UI["Mobile UI & State Engine"]
-        Reconcile["In-Memory State Reconciler (Slot.finalStatus)"]
-    end
-
-    subgraph Firebase ["Google Firebase Backend"]
-        Firestore[("Cloud Firestore\n• parking_slots (reservations)\n• user_id, car_number, expiry")]
-        RTDB[("Firebase Realtime Database\n• iot_parking (sensor telemetry)\n• barrier/openRequest")]
-    end
-
-    subgraph Hardware ["Physical IoT Prototype"]
-        ESP32["ESP32 Microcontroller"]
-        IRSensors["IR Proximity Sensors (Slots 1-4)"]
-        Servo["Barrier Gate Servo Motor"]
-    end
-
-    UI -->|"Atomic Booking & Expiry"| Firestore
-    Firestore -->|"Live Document Stream"| Reconcile
-    RTDB -->|"Live Telemetry Stream & Polling"| Reconcile
-    Reconcile --> UI
-
-    UI -->|"Press-and-Hold Open Request"| RTDB
-    IRSensors -->|"Vehicle Detection"| ESP32
-    ESP32 -->|"Sync Sensor State"| RTDB
-    RTDB -->|"Actuation Command"| ESP32
-    ESP32 -->|"PWM Control"| Servo
-```
+Developed as a university team DLD project, this smart parking system bridges a mobile user interface with a physical IoT parking model. The Flutter application allows drivers to discover available spaces, book designated parking spots with custom durations, monitor active parking sessions with live countdowns, and remotely actuate an entry barrier servo gate.
 
 ---
 
@@ -73,10 +37,8 @@ flowchart TD
 
 - **Live Multi-State Slots**: Real-time visualization of slots categorized as **Available** (Green), **Reserved** (Orange), or **Occupied** (Red).
 - **Flexible Duration Booking**: Interactive slider supporting reservations in seconds (demo/testing), minutes, or hours.
-- **Race-Condition Protection**: Firestore atomic transactions prevent concurrent double-booking of the same slot.
-- **Hybrid State Engine**: Reconciles cloud reservation records with physical IR sensor readings to detect arrivals and unauthorized parking.
+- **Hybrid State Engine**: Cloud reservation records with physical IR sensor readings to detect arrivals and unauthorized parking.
 - **Hardware Barrier Control**: Animated 2-second press-and-hold button in Flutter that sends an actuation signal to the ESP32 via RTDB.
-- **Session Dashboard**: Displays remaining time, percentage progress indicator, and active vehicle registration number.
 - **Time Extension & Expiry Sweeps**: In-app parking time extension and automatic cleanup sweeps for expired reservations.
 - **Failsafe Telemetry**: Realtime Database stream listener with an automated 3-second polling fallback in case of connection interruptions.
 
@@ -113,8 +75,6 @@ This project was developed as a collaborative university team effort:
 - **Software Developer (My Role)**:
   - Architected the Flutter mobile application (UI/UX, GoRouter, Provider state management).
   - Implemented the dual-database integration (Cloud Firestore + Firebase Realtime Database).
-  - Designed the hybrid state reconciliation engine ([`Slot.finalStatus`](lib/src/models/slot.dart)).
-  - Built atomic booking transactions, duration calculators, countdown timers, and the press-and-hold barrier actuation widget.
 - **Hardware & Embedded Teammates**:
   - Constructed the physical scale-model parking layout and barrier gate.
   - Wired the ESP32 microcontroller, IR proximity sensors, and SG90 servo motor.
